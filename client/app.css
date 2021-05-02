@@ -1,0 +1,148 @@
+.woggleTop {
+  transform-origin: 50% bottom;
+  -o-transform-origin: 50% bottom;
+  -ms-transform-origin: 50% bottom;
+  -webkit-transform-origin: 50% bottom;
+  animation: woggleTop 1s linear infinite;
+}
+
+@keyframes woggleTop {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+nav {
+  background-color: #85d0b7;
+}
+
+#right-nav {
+  background-color: #02353C;
+  color: #85d0b7;
+  border-radius: 0 10px 10px 0;
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 60px;
+  overflow: hidden;
+}
+#right-nav ul {
+  font-size: 1.5em;
+  padding-left: 0;
+  height: clamp(170px, 1000px, 80vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#right-nav ul li {
+  margin-left: 7px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#right-nav ul li img:hover {
+  filter: invert(0.5);
+}
+#right-nav ul li:nth-of-type(1) {
+  background-color: #85d0b7;
+  margin-left: 0;
+  padding-left: 7px;
+}
+#right-nav ul li:hover {
+  color: #C1F6ED;
+}
+
+.slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+.slideOut {
+  animation: slideOut 0.5s ease-out;
+}
+
+.flip {
+  animation: flip-over 0.5s ease-out;
+}
+
+.flip-out {
+  animation: flip-over2 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 60px;
+  }
+  100% {
+    width: 230px;
+  }
+}
+@keyframes slideOut {
+  0% {
+    width: 230px;
+  }
+  100% {
+    width: 60px;
+  }
+}
+@keyframes flip-over {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotatey(180deg);
+  }
+}
+@keyframes flip-over2 {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotatey(0deg);
+  }
+}
+#right-nav-switch img {
+  float: left;
+}
+
+body {
+  background-image: url("images/homePage.jpg");
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#welcome {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.right-menu-text {
+  margin-left: 5px;
+}
+
+/*# sourceMappingURL=app.css.map */
