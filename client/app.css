@@ -33,7 +33,7 @@ nav {
 }
 
 #right-nav {
-  background-color: #02353C;
+  background-color: #02353c;
   color: #85d0b7;
   border-radius: 0 10px 10px 0;
   position: fixed;
@@ -64,7 +64,7 @@ nav {
   padding-left: 7px;
 }
 #right-nav ul li:hover {
-  color: #C1F6ED;
+  color: #c1f6ed;
 }
 
 .slideIn {
@@ -88,12 +88,12 @@ nav {
     width: 60px;
   }
   100% {
-    width: 230px;
+    width: 250px;
   }
 }
 @keyframes slideOut {
   0% {
-    width: 230px;
+    width: 250px;
   }
   100% {
     width: 60px;
@@ -115,6 +115,18 @@ nav {
     transform: rotatey(0deg);
   }
 }
+.fadeIn {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 #right-nav-switch img {
   float: left;
 }
@@ -125,24 +137,184 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
-  position: relative;
+  font-family: "Quicksand", sans-serif;
 }
 
 .hidden {
   visibility: hidden;
 }
 
-#welcome {
+.hidden {
+  visibility: none;
+}
+
+#s1 #home-container {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
+  padding: 2em 4em;
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
+#s1 #subtext {
+  font-size: 1.4em;
+}
+#s1 #subtext::after {
+  content: " ";
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 10%, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.2) 90%);
+  position: relative;
+  top: -0.5em;
+}
 
 .right-menu-text {
   margin-left: 5px;
 }
+
+#s2 {
+  margin-left: calc(60px + 10px);
+}
+#s2 h1 {
+  text-align: center;
+}
+#s2 h1::after {
+  content: " ";
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 35%, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.2) 65%);
+  position: relative;
+  top: -0.5em;
+}
+#s2 #grid {
+  padding-bottom: 2em;
+  display: grid;
+  grid-template-rows: repeat(4, fit-content(100px) fit-content(100vh));
+  grid-template-columns: 1fr fit-content(50%);
+}
+#s2 .headings {
+  grid-column: span 2;
+  text-align: center;
+  margin: 1em 0;
+}
+#s2 p {
+  width: clamp(45ch, 50%, 75ch);
+  font-size: large;
+}
+#s2 img {
+  height: 30vh;
+  float: right;
+  border-radius: 1em;
+}
+#s2 .left {
+  grid-column: 1;
+  justify-self: right;
+  margin-right: 5%;
+}
+@media screen and (min-width: 720px) {
+  #s2 .left:nth-of-type(2) {
+    grid-row: calc(2 * 2);
+  }
+  #s2 .left:nth-of-type(4) {
+    grid-row: calc(2 * 4);
+  }
+  #s2 .left:nth-of-type(6) {
+    grid-row: calc(2 * 6);
+  }
+}
+#s2 .right {
+  grid-column: 2;
+  margin-left: 5%;
+}
+@media screen and (max-width: 720px) {
+  #s2 .left,
+#s2 .right {
+    grid-column: span 2;
+    justify-self: center;
+  }
+}
+
+#s3,
+#s4 {
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+  margin-left: calc(60px + 10px);
+}
+#s3 input::-webkit-outer-spin-button,
+#s3 input::-webkit-inner-spin-button,
+#s4 input::-webkit-outer-spin-button,
+#s4 input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#s3 input[type=number],
+#s4 input[type=number] {
+  -moz-appearance: textfield;
+}
+#s3 .form-container,
+#s4 .form-container {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5em 2em;
+  margin: 5vh 25%;
+}
+#s3 .form-container h2,
+#s4 .form-container h2 {
+  text-align: center;
+}
+#s3 .form-container *,
+#s4 .form-container * {
+  margin: 1em 0;
+}
+#s3 .form-container label,
+#s4 .form-container label {
+  text-align: center;
+  font-size: 1.4em;
+}
+#s3 .form-container button,
+#s4 .form-container button {
+  font-size: 1.8em;
+  width: 40vw;
+  padding: 0.5em 1em;
+  background-color: rgba(134, 208, 183, 0.5);
+  border: 2px solid rgba(134, 208, 183, 0.8);
+  border-radius: 0.2em;
+  transition: background-color 0.5s;
+}
+#s3 .form-container button:hover,
+#s4 .form-container button:hover {
+  background-color: #85d0b7;
+}
+@media screen and (max-width: 768px) {
+  #s3 .form-container,
+#s4 .form-container {
+    margin: 5vh 5%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #s3 .form-container,
+#s4 .form-container {
+    margin: 5vh 10%;
+  }
+}
+
+body > canvas {
+  opacity: 0.2;
+}
+
+/*
+  increase size of main heading
+  imporve button styling
+  change font of first page
+  include description
+*/
 
 /*# sourceMappingURL=app.css.map */

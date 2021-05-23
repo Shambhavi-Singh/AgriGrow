@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <title>farmer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <section id="1" style="display: none;">
-    <h1 id="welcome"> </h1>
+  <section id="s1">
+    <div id="home-container">
+      <h1 id="welcome">  </h1>
+      <p id="subtext" class="hidden tohide">An Ml trained application to recommend best crop to grow</p>
+      <p class="hidden tohide">Crop Recommender System enables you to either enter your soil parameters or location details to extract the recommendation for the most profitable crop to grow in that particular environment. It uses a machine learning trained model to calculate the best crop based on the values of different parameters.</p>
+    </div>
+    
   </section>
-  <section id="2">
-    <h1>Hello world</h1>
-  </section>
+  
     <div class="container-sm sticky-top">
         <nav class="navbar navbar-light">
             <div class="container-fluid">
@@ -36,7 +41,104 @@
             <li><img src="svg/globe.svg" alt="" width="40" height="34"> <span class="hidden right-menu-text">Location Based</span></li>
         </ul>
     </div>
+    <section id="s2" style="display: none;">
+      <h1>Instructions</h1>
 
+      <div id="grid">
+        <h3 class="headings">Nitrogen</h3>
+        <img src= "images/inst4.PNG" class="left"></img>
+        <p class="right">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
+        <h3 class="headings">Phosphorus</h3>
+        <img src="images/inst2.PNG" alt="phosphorus image" class="right">
+        <p class="left">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
+        <h3 class="headings">Potassium</h3>
+        <img src="images/inst3.PNG" class="left"></img>
+        <p class="right">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
+        <h3 class="headings">Temperature</h3>
+        <img src="images/inst7.jpg" alt="Temperature image" class="right">
+        <p class="left">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
+        <h3 class="headings">Humidity</h3>
+        <img src="images/inst5.jpg" class="left"></img>
+        <p class="right">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
+        <h3 class="headings">PH</h3>
+        <img src="images/inst6.jpg" alt="phosphorus image" class="right">
+        <p class="left">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
+        <h3 class="headings">Rainfall</h3>
+        <img src="images/inst1.jpg" class="left"></img>
+        <p class="right">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
+      
+      
+      </div>
+    </section>
+    <section id="s3" style="display: none;">
+      <div class="form-container">
+        <h2>Crop details form</h2>
+        <form class="container">
+          <div class="row">
+            <label for="nitrogen" class="col-xs-12 col-md-6">Nitrogen:</label>
+            <input type="number" name="nitrogen" id="nitrogen" class="col-xs-12 col-md-6">
+          </div>
+          <div class="row">
+            <label for="phosphorus" class="col-xs-12 col-md-6">Phosphorus:</label>
+            <input type="number" name="phosphorus" id="phosphorus" class="col-xs-12 col-md-6">
+          </div>
+          <div class="row">
+            <label for="potassium" class="col-xs-12 col-md-6">Potassium:</label>
+            <input type="number" name="potassium" id="potassium" class="col-xs-12 col-md-6">
+          </div>
+          <div class="row">
+            <label for="temprature" class="col-xs-12 col-md-6">Temprature:</label>
+            <input type="number" name="temprature" id="temprature" class="col-xs-12 col-md-6">
+          </div>
+          <div class="row">
+            <label for="humidity" class="col-xs-12 col-md-6">Humidity:</label>
+            <input type="number" name="humidity" id="humidity" class="col-xs-12 col-md-6">
+          </div>
+          <div class="row">
+            <label for="PH" class="col-xs-12 col-md-6">PH:</label>
+            <input type="number" name="PH" id="PH" class="col-xs-12 col-md-6">
+          </div>
+          <div class="row">
+            <label for="rainfall" class="col-xs-12 col-md-6">Rainfall:</label>
+            <input type="number" name="rainfall" id="rainfall" class="col-xs-12 col-md-6">
+          </div>
+          <div class="row" style="display: flex;justify-content: center;">
+            <col-12 >
+            <button>Submit</button>
+          </col-12>
+          </div>
+        </form>
+      </div>
+      
+    </section>
+    <section id="s4" style="display: none;">
+      <div class="form-container">
+        <h2>Crop details form</h2>
+        <form class="container">
+          <div class="row">
+            <label for="state" class="col-xs-12 col-md-6">State:</label>
+            <input type="number" name="state" id="state" class="col-xs-12 col-md-6">
+          </div>
+          <div class="row">
+            <label for="area" class="col-xs-12 col-md-6">Area:</label>
+            <input type="number" name="area" id="area" class="col-xs-12 col-md-6">
+          </div>
+          <div class="row" style="display: flex;justify-content: center;">
+            <col-12 >
+            <button>Submit</button>
+          </col-12>
+          </div>
+        </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
+
+<!-- nitrogen
+phosphorus
+potassium
+temperature
+humidity
+PH
+rainfall -->
