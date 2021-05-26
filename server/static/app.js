@@ -37,7 +37,6 @@ $(`#right-nav-switch`).click(() => {
 
 //welcome text logic:
 const removeHiddenWelcomeMessage = () => {
-  console.log("here");
   $(".tohide").addClass("fadeIn").removeClass("hidden");
 };
 const welcomeMessage = "Crop Recommender . System";
@@ -74,7 +73,7 @@ $("#right-nav ul li").each((index, value) => {
       $(".tohide").removeClass("fadeIn").addClass("hidden");
     }
     if (index == 2) {
-      $("body").css("background-image", "url('images/instPage.jpg')");
+      $("body").css("background-image", "url('/static/images/instPage.jpg')");
       bubbly({
         colorStart: "hsla(360, 100%, 100%, 0.1)",
         colorStop: "hsla(360, 100%, 100%, 0.1)",
@@ -85,7 +84,62 @@ $("#right-nav ul li").each((index, value) => {
       });
     } else {
       $("canvas").remove("body > canvas");
-      $("body").css("background-image", "url('images/homePage.jpg')");
+      $("body").css("background-image", "url('/static/images/homePage.jpg')");
     }
   });
 });
+
+function handleClick() {
+  const arr = [
+    "#nitrogen",
+    "#phosphorus",
+    "#potassium",
+    "#temprature",
+    "#humidity",
+    "#PH",
+    "#rainfall",
+  ];
+  const url = new URL("http://192.168.29.230:5000/get_crop_info");
+  const params = [];
+  arr.forEach((element) => {
+    params.push([element.replace("#", ""), $(element).val()]);
+  });
+  console.log(params);
+
+  url.search = new URLSearchParams(params).toString();
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      if (data.prediction) {
+        $("#form-response").text(data.prediction);
+        $("#result-div").css({ display: "block" });
+      }
+    });
+  arr.forEach();
+  $("#");
+}
+
+function handleClickLocation() {
+  const arr = ["#district", "#state"];
+  const url = new URL("http://192.168.29.230:5000/location");
+  const params = [];
+  arr.forEach((element) => {
+    params.push([element.replace("#", ""), $(element).val()]);
+  });
+
+  url.search = new URLSearchParams(params).toString();
+  console.log(url);
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      if (data.prediction) {
+        $("#form-response-location").text(data.prediction);
+        $("#result-location").css({ display: "block" });
+      }
+    });
+  arr.forEach();
+  $("#");
+}

@@ -132,7 +132,7 @@ nav {
 }
 
 body {
-  background-image: url("images/homePage.jpg");
+  background-image: url("/static/images/homePage.jpg");
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -169,7 +169,12 @@ body {
   display: inline-block;
   height: 1px;
   width: 100%;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 10%, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.2) 90%);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 10%,
+    rgba(0, 0, 0, 0.7),
+    rgba(255, 255, 255, 0.2) 90%
+  );
   position: relative;
   top: -0.5em;
 }
@@ -189,7 +194,12 @@ body {
   display: inline-block;
   height: 1px;
   width: 100%;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 35%, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.2) 65%);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 35%,
+    rgba(0, 0, 0, 0.7),
+    rgba(255, 255, 255, 0.2) 65%
+  );
   position: relative;
   top: -0.5em;
 }
@@ -235,7 +245,7 @@ body {
 }
 @media screen and (max-width: 720px) {
   #s2 .left,
-#s2 .right {
+  #s2 .right {
     grid-column: span 2;
     justify-self: center;
   }
@@ -254,8 +264,8 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
-#s3 input[type=number],
-#s4 input[type=number] {
+#s3 input[type="number"],
+#s4 input[type="number"] {
   -moz-appearance: textfield;
 }
 #s3 .form-container,
@@ -295,19 +305,36 @@ body {
 }
 @media screen and (max-width: 768px) {
   #s3 .form-container,
-#s4 .form-container {
+  #s4 .form-container {
     margin: 5vh 5%;
   }
 }
 @media screen and (max-width: 1080px) {
   #s3 .form-container,
-#s4 .form-container {
+  #s4 .form-container {
     margin: 5vh 10%;
   }
 }
 
 body > canvas {
   opacity: 0.2;
+}
+
+#result-div,
+#result-location {
+  margin: 1em 20%;
+  margin-bottom: 1em;
+  background-color: #85d0b7;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-response,
+#form-response-location {
+  font-size: 1.3em;
+  text-align: center;
 }
 
 /*

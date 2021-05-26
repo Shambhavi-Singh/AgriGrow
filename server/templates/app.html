@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="/static/app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<script>
+  function handle_crop_submit(e) {
+    alert("here");
+    e.preventDefault();
+    return false;
+  }
+
+</script>
 </head>
 <body>
   <section id="s1">
@@ -75,40 +83,44 @@
         <h2>Crop details form</h2>
         <form class="container">
           <div class="row">
-            <label for="nitrogen" class="col-xs-12 col-md-6">Nitrogen:</label>
-            <input type="number" name="nitrogen" id="nitrogen" class="col-xs-12 col-md-6">
+            <label for="nitrogen" class="col-xs-12 col-md-6">Nitrogen (in ppm):</label>
+            <input type="number" name="nitrogen" id="nitrogen" class="col-xs-12 col-md-6" required>
           </div>
           <div class="row">
-            <label for="phosphorus" class="col-xs-12 col-md-6">Phosphorus:</label>
-            <input type="number" name="phosphorus" id="phosphorus" class="col-xs-12 col-md-6">
+            <label for="phosphorus" class="col-xs-12 col-md-6">Phosphorus (in ppm):</label>
+            <input type="number" name="phosphorus" id="phosphorus" class="col-xs-12 col-md-6" required>
           </div>
           <div class="row">
-            <label for="potassium" class="col-xs-12 col-md-6">Potassium:</label>
-            <input type="number" name="potassium" id="potassium" class="col-xs-12 col-md-6">
+            <label for="potassium" class="col-xs-12 col-md-6">Potassium (in ppm):</label>
+            <input type="number" name="potassium" id="potassium" class="col-xs-12 col-md-6" required>
           </div>
           <div class="row">
-            <label for="temprature" class="col-xs-12 col-md-6">Temprature:</label>
-            <input type="number" name="temprature" id="temprature" class="col-xs-12 col-md-6">
+            <label for="temprature" class="col-xs-12 col-md-6">Temprature (celcius):</label>
+            <input type="number" name="temprature" id="temprature" class="col-xs-12 col-md-6" required>
           </div>
           <div class="row">
-            <label for="humidity" class="col-xs-12 col-md-6">Humidity:</label>
-            <input type="number" name="humidity" id="humidity" class="col-xs-12 col-md-6">
+            <label for="humidity" class="col-xs-12 col-md-6">Humidity (%):</label>
+            <input type="number" name="humidity" id="humidity" class="col-xs-12 col-md-6" required>
           </div>
           <div class="row">
             <label for="PH" class="col-xs-12 col-md-6">PH:</label>
             <input type="number" name="PH" id="PH" class="col-xs-12 col-md-6">
           </div>
           <div class="row">
-            <label for="rainfall" class="col-xs-12 col-md-6">Rainfall:</label>
-            <input type="number" name="rainfall" id="rainfall" class="col-xs-12 col-md-6">
+            <label for="rainfall" class="col-xs-12 col-md-6">Rainfall(in mm):</label>
+            <input type="number" name="rainfall" id="rainfall" class="col-xs-12 col-md-6" required>
           </div>
           <div class="row" style="display: flex;justify-content: center;">
             <col-12 >
-            <button>Submit</button>
+            <button type="button" onclick="handleClick()">Submit</button>
           </col-12>
+          </div>
+          <div id="result-div" style="display: none;">
+            <p id="form-response"></p>
           </div>
         </form>
       </div>
+      
       
     </section>
     <section id="s4" style="display: none;">
@@ -117,16 +129,19 @@
         <form class="container">
           <div class="row">
             <label for="state" class="col-xs-12 col-md-6">State:</label>
-            <input type="number" name="state" id="state" class="col-xs-12 col-md-6">
+            <input type="text" name="state" id="state" class="col-xs-12 col-md-6" required>
           </div>
           <div class="row">
-            <label for="area" class="col-xs-12 col-md-6">Area:</label>
-            <input type="number" name="area" id="area" class="col-xs-12 col-md-6">
+            <label for="district" class="col-xs-12 col-md-6">District:</label>
+            <input type="text" name="district" id="district" class="col-xs-12 col-md-6" required>
           </div>
           <div class="row" style="display: flex;justify-content: center;">
             <col-12 >
-            <button>Submit</button>
+            <button type="button" onclick="handleClickLocation()">Submit</button>
           </col-12>
+          </div>
+          <div id="result-location" style="display: none;">
+            <p id="form-response-location"></p>
           </div>
         </form>
     </section>
