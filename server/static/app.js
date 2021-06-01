@@ -99,7 +99,7 @@ function handleClick() {
     "#PH",
     "#rainfall",
   ];
-  const url = new URL("http://192.168.29.230:5000/get_crop_info");
+  const url = new URL("http://localhost:5000/get_crop_info");
   const params = [];
   arr.forEach((element) => {
     params.push([element.replace("#", ""), $(element).val()]);
@@ -117,13 +117,11 @@ function handleClick() {
         $("#result-div").css({ display: "block" });
       }
     });
-  arr.forEach();
-  $("#");
 }
 
 function handleClickLocation() {
   const arr = ["#district", "#state"];
-  const url = new URL("http://192.168.29.230:5000/location");
+  const url = new URL("http://localhost:5000/location");
   const params = [];
   arr.forEach((element) => {
     params.push([element.replace("#", ""), $(element).val()]);
@@ -140,6 +138,4 @@ function handleClickLocation() {
         $("#result-location").css({ display: "block" });
       }
     });
-  arr.forEach();
-  $("#");
 }

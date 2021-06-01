@@ -26,10 +26,11 @@ def crop():
 
 @app.route('/location', methods=['GET', 'POST'])
 def location():
+
     location_df = pd.read_csv(LOCATION_PATH)
     State_Name = request.args.get("state")
     District_Name = request.args.get("district")
-
+    print([State_Name,District_Name])
     print(location_df.head())
     crop = location_df[(location_df["State_Name"] ==
                         State_Name) & (location_df["District_Name"] == District_Name.upper())]["Crop"]
