@@ -8,7 +8,7 @@
     <title>farmer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="/static/app.css">
+    <link rel="stylesheet" href="./app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -26,7 +26,7 @@
         <nav class="navbar navbar-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <img src="/static/svg/scythe-svgrepo-com.svg" alt="" width="30" height="24" class="d-inline-block align-text-top" id="logo">
+                <img src="/svg/scythe-svgrepo-com.svg" alt="" width="30" height="24" class="d-inline-block align-text-top" id="logo">
                 Crop Recommender
               </a>
             </div>
@@ -35,10 +35,11 @@
     <div id="right-nav">
         <ul style="list-style-type:none;">
             <li id="right-nav-switch"> <img src="svg/arrow.svg" alt="" width="40" height="34"></li>
-            <li><img src="/static/svg/home.svg" alt="" width="40" height="34"> <span class="hidden right-menu-text">Home</span></li>
-            <li><img src="/static/svg/instructions.svg" alt="" width="40" height="34">  <span class="hidden right-menu-text">Instructions</span></li>
-            <li><img src="/static/svg/crop.svg" alt="" width="40" height="34"> <span class="hidden right-menu-text">Soil Based</span></li>
-            <li><img src="/static/svg/globe.svg" alt="" width="40" height="34"> <span class="hidden right-menu-text">Location Based</span></li>
+            <li><img src="./svg/home.svg" alt="" width="40" height="34"> <span class="hidden right-menu-text">Home</span></li>
+            <li><img src="./svg/instructions.svg" alt="" width="40" height="34">  <span class="hidden right-menu-text">Instructions</span></li>
+            <li><img src="./svg/crop.svg" alt="" width="40" height="34"> <span class="hidden right-menu-text">Soil Based</span></li>
+            <li><img src="./svg/globe.svg" alt="" width="40" height="34"> <span class="hidden right-menu-text">Location Based</span></li>
+            <li><img src="./svg/disease.png" alt="" width="40" height="34"> <span class="hidden right-menu-text">Disease Detection</span></li>
         </ul>
     </div>
     <section id="s2" style="display: none;">
@@ -46,25 +47,25 @@
 
       <div id="grid">
         <h3 class="headings">Nitrogen</h3>
-        <img src= "/static/images/inst4.PNG" class="left"></img>
+        <img src= "./images/inst4.PNG" class="left"></img>
         <p class="right">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
         <h3 class="headings">Phosphorus</h3>
-        <img src="/static/images/inst2.PNG" alt="phosphorus image" class="right">
+        <img src="./images/inst2.PNG" alt="phosphorus image" class="right">
         <p class="left">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
         <h3 class="headings">Potassium</h3>
-        <img src="/static/images/inst3.PNG" class="left"></img>
+        <img src="./images/inst3.PNG" class="left"></img>
         <p class="right">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
         <h3 class="headings">Temperature</h3>
-        <img src="/static/images/inst7.jpg" alt="Temperature image" class="right">
+        <img src="./images/inst7.jpg" alt="Temperature image" class="right">
         <p class="left">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
         <h3 class="headings">Humidity</h3>
-        <img src="/static/images/inst5.jpg" class="left"></img>
+        <img src="./images/inst5.jpg" class="left"></img>
         <p class="right">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
         <h3 class="headings">PH</h3>
-        <img src="/static/images/inst6.jpg" alt="phosphorus image" class="right">
+        <img src="./images/inst6.jpg" alt="phosphorus image" class="right">
         <p class="left">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
         <h3 class="headings">Rainfall</h3>
-        <img src="/static/images/inst1.jpg" class="left"></img>
+        <img src="./images/inst1.jpg" class="left"></img>
         <p class="right">instructions: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum maxime delectus cum cupiditate a necessitatibus amet dicta nostrum, error cumque omnis, rerum, aperiam fugiat officiis dolores dolorum suscipit unde perspiciatis.</p>
       
       
@@ -131,7 +132,7 @@
         </form>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
-    <script src="/static/app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
 
