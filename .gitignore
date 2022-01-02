@@ -1,3 +1,6 @@
 color_scheme.txt
 client/app.scss
 venv
+server/temp
+curl_commands
+*.h5
